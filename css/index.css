@@ -36,42 +36,37 @@ body {
    .video-m {display: none;}
 
 /* hero1 button & span  */
-.hero_button {
-   opacity: 1;
-   visibility: inherit;
+.hero_button{
    position: absolute;
+   overflow: visible;
    top: 50%;
    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
+   transform: translate(-50%, -50%);
+   text-align: center;
 }
-.btn_play {
-   width: 70px;
-   height: 70px;
-}
-.hero_button span {
-   font-size: 16px;
-   font-weight: 100;
-   /* margin-top: 25px; */
-   bottom: -25px;
-   display: block;
-    position: absolute;
-    left: 50%;
-    color: rgb(255,255,255);
-    /* transform: translate(-50%, 50%); */
-    white-space: nowrap;
-    text-transform: uppercase;
-}
+   .btn_play {
+      width: 70px;
+      height: 70px;
+      background-color: rgba(5, 20, 31, 0.4); 
+      border-radius: 50%;
+   } 
+   .hero_button span {
+      font-size: 16px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      color: rgb(255,255,255); 
+      white-space: nowrap;
+      text-transform: uppercase;
+      bottom: -25px;
+   }
  .hero_text {
    opacity: 1;
    visibility: inherit;
    position: absolute;
    bottom: 8%;
-   left: 50%;
+   /* left: 50%; */
    width: 100%;
    padding-left: 1.5rem;
    padding-right: 1.5rem;
@@ -93,7 +88,7 @@ body {
       line-height:58.8px;
       margin: 0;
       padding: 0;
-      font-weight: 400;
+      font-weight: 700;
    }
    .hero_text p {
       margin-top: 10px;
@@ -110,11 +105,11 @@ body {
       animation: arrow-down infinite 1.5s;
       cursor: pointer;
       position: absolute;
-      bottom: -40px;
+      bottom: 3%;
       z-index: 1;
       left: 50%;
-       width: 40px;
-       height: 40px;
+      width: 40px;
+      height: 40px;
        background-image: url(../img/button_down_wht.png);
      }
          /* Arrow-down 애니메이션 적용 */
@@ -135,20 +130,6 @@ body {
    display: block;
    position: relative;
 }
-.pin-spacer{
-   z-index: auto;
-   float: none;
-   flex-shrink: 1;
-   display: flex;
-   margin: 0px;
-   inset: 0px;
-   position: relative;
-   overflow: visible;
-   box-sizing: border-box;
-   width: 1920px;
-   height: 3240px;
-   padding: 0px 0px 2160px;
-}
 .hero_2_kn {
    /* transform: translate(0px, 0px); */
     inset: 0px auto auto 0px;
@@ -167,8 +148,8 @@ body {
 }
 .hero_2_visual{
    /* transform: translate(0px, -16px); */
-   height: 140%;
-   top: -20%;
+   /* height: 140%;
+   top: -20%; */
    position: absolute;
    left: 0;
    right: 0;
@@ -187,27 +168,30 @@ body {
 }
 .video-m {display: none;} */
 
-/* 이건뜬다고?  */
 .hero_2_cont {   
    opacity: 1;
     visibility: inherit;
     position: relative;
     width: 100%;
     padding: 0 15px;
-    /* -webkit-box-sizing: border-box;
-    box-sizing: border-box; */
     color: #fff;
     text-align: center;
 }
    /* kn kn_logo 합치기 ? */
    .kn{
     position: relative;
-    margin: 60px 100px ;
+    margin-top: 100px;
+    margin-bottom: 140px;
     }
    .kn_logo {
       max-width: 1060px;
       margin: 0 auto;
-      margin-left: 415px;
-      margin-right: 415px;
+      margin-left: 525px;
+      margin-right: 525px;
+   }
+   .kn_title {
+      font-size: 42px;
+      line-height: 58.8px;
+      font-weight: 700;
    }
 
