@@ -21,7 +21,6 @@ body {
     right: 0;
     bottom: 0;
     width: 100%;
-    /* transform: translate(0px, 0px); */
    }
    .video-d {
       width: 100%;
@@ -43,6 +42,7 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
    text-align: center;
+   z-index: 2;
 }
    .btn_play {
       width: 70px;
@@ -66,19 +66,18 @@ body {
    visibility: inherit;
    position: absolute;
    bottom: 8%;
-   /* left: 50%; */
    width: 100%;
    padding-left: 1.5rem;
    padding-right: 1.5rem;
    color: #fff;
    text-align: center;
+   z-index: 2;
  }
    .eyebrow {
       margin-bottom: 20px;
       font-size: 16px;
       display: block;
       color: rgb(246, 242, 237);
-      /* text-transform: uppercase; */
       font-weight: 700;
       letter-spacing: 2.4px;
       line-height: 22.4px;
@@ -99,6 +98,8 @@ body {
       font-weight: 100;
       line-height: 32px;
    }
+   .br-m {display: none;}
+
    .btn-guide-arrow {
       display: block;
       transform: translate3d(-50%, 0, 0);
@@ -124,14 +125,23 @@ body {
          -webkit-transform: translate3d(-50%, 0, 0);
                  transform: translate3d(-50%, 0, 0); } 
                }
-     
+
+ .hero_visual::after { 
+     content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+     background-color: rgba(0,0,0,0.5);   
+      }    
+
 /* hero 2 page  */
 .sect-space {
    display: block;
    position: relative;
 }
 .hero_2_kn {
-   /* transform: translate(0px, 0px); */
     inset: 0px auto auto 0px;
     margin: 0px;
     max-width: 1920px;
@@ -147,27 +157,12 @@ body {
     align-items: center;
 }
 .hero_2_visual{
-   /* transform: translate(0px, -16px); */
-   /* height: 140%;
-   top: -20%; */
    position: absolute;
    left: 0;
    right: 0;
    bottom: 0;
    width: 100%;
 }
-/* .video-d {                main 1 과 똑같
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-.vidsual_video {
-   max-width: 100%;
- border: 0;
- vertical-align: top;
-}
-.video-m {display: none;} */
-
 .hero_2_cont {   
    opacity: 1;
     visibility: inherit;
@@ -194,3 +189,92 @@ body {
       line-height: 58.8px;
       font-weight: 700;
    }
+.hero_2_visual::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);   
+    } 
+    
+
+@media only screen and (max-width: 959px) {
+   /* hero 1 page  */
+      .hero_visual {  height: 1024px;  }
+      .video-d{  display: none;}
+      .video-m { display: block;}
+      .video-m video{
+         width: 100%;
+         height:1024px;
+         object-fit: unset;
+      }
+      .hero_button{ top: 40%; }
+         .btn_play {
+            width: 50px;
+            height: 50px;
+         } 
+         .hero_button span {  display: none; }
+         .eyebrow {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 2.1px;
+            line-height: 19.6px;
+         }
+         .hero_text h2 {
+            font-size: 32px;
+            line-height: 44.8px;
+         }
+         .hero_text p {
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 16px 0;
+           }
+         .btn-guide-arrow {
+            width: 20px;
+            height: 20px;
+          }
+           
+      /* hero 2 page  */
+      .hero_2_kn {
+          left: 0px;
+          top: 0px;
+          max-width: 768px;
+          width: 768px;
+          max-height: 1024px;
+          height: 1024px;
+          padding: 0px;
+      }
+      .hero_2_visual { height: 1024px;}
+      .hero_2_cont {  padding: 0 30px; }
+       
+        .kn{  margin-bottom: 180px; }
+        .kn_logo {
+            margin-left:0;
+           margin-right: 0;
+        }
+        .kn_title {
+             font-size: 32px;   
+            line-height: 44.8px;
+        }
+   }
+
+@media only screen and (max-width: 414px)  {
+   /* hero 1 page  */
+   .hero_visual {  height: 812px; }
+   .video-m video{height:812px;  }
+   .br-m { display:block; }
+   .hero_2_kn {
+      max-width: 375px;
+      width: 375px;
+      max-height: 812px;
+      height: 812px;
+  }
+  .hero_2_visual {  height:812px; }
+  .hero_2_cont {   padding: 0 15px;}
+  .kn{ 
+      margin-top: 60px;
+      margin-bottom: 140px;
+      }
+}
